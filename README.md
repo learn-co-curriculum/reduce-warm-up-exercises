@@ -122,7 +122,7 @@ This one is tricky! The array contains objects like:
 
 Your reduce function should do the operation specified. So,
 
-``` js
+```js
 [
   {type: "Add", value: 4}
   {type: "Multiply", value: 3}
@@ -133,6 +133,18 @@ Your reduce function should do the operation specified. So,
 ```
 
 Because (((6 + 4) * 3) / 2 ) - 3) is 12
+
+## When to use `reduce`
+
+We can see that the other functions (`filter`, `map`) can be built with reduce. So, should we just use reduce for everything? No! It's more confusing than the others!
+
+High-level heuristic for when to use `reduce` vs the other array methods:
+
+- `map`: I have a list of _n_ things and want a list of _n_ things, transformed.
+- `filter`: I have a list of _n_ things and want a subset of those things
+- `reduce`: I have a list of _n_ things and want back _one thing_ - a single aggregate of all the things in the list.
+
+The reason that reduce can be used to build `filter` and `map` is that the _aggregate_ that we get from `reduce` could be a list, e.g. a subset or a transform of the original list.
 
 ## Functions that use reduce vs. Reducer functions
 
