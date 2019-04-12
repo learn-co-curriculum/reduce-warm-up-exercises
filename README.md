@@ -124,9 +124,9 @@ Your reduce function should do the operation specified. So,
 
 ```js
 [
-  {type: "Add", value: 4}
-  {type: "Multiply", value: 3}
-  {type: "Divide", value: 2}
+  {type: "Add", value: 4},
+  {type: "Multiply", value: 3},
+  {type: "Divide", value: 2},
   {type: "Subtract", value: 3}
 ].reduce(/* calculator */, 6)
 => 12
